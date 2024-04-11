@@ -2,10 +2,18 @@
 
 function forEach(array, operation) {
   // Start coding here
+  let newNum = [];
+  for (let i = 0; i < array.length; i++) {
+    newNum[i] = add(array[i]);
+  }
+  return newNum;
+}
+function add(num) {
+  return num + 5000;
 }
 
 const employeeSalaries = [20005, 40000, 32000, 14500, 344000];
-const newEmployeeSalaries = [];
+const newEmployeeSalaries = forEach(employeeSalaries, add);
 
 // Using `forEach` function here
 
